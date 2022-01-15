@@ -1,0 +1,585 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "nunito", "ubuntu";
+    line-height: 1.4;
+    background: hsl(0, 0%, 93%);
+}
+
+/* ---------- Global ---------- */
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.3em;
+}
+
+h3 {
+    font-size: 1.9em;
+}
+
+h2, h3 {
+    color: hsl(208, 49%, 24%);
+}
+
+section {
+    max-width: 1440px;
+    margin: 0 auto 120px;
+    padding: 120px 0 0;
+}
+
+
+
+
+/* ---------- Header ---------- */
+header {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    color: white;
+    background: url('images/bg-pattern-intro-desktop.svg'), 
+                linear-gradient(to left, hsl(353, 100%, 62%) 50%, hsl(13, 100%, 72%) 100%) ;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: center left;
+    border-bottom-left-radius: 90px;
+    padding: 50px 0 0;
+    margin: 0 auto;
+}  
+
+header .container {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    font-weight: bold;
+    display: flex;
+    position: relative;
+}
+
+.logo h2 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    font-size: .9em;
+    margin-left: 65px; 
+}
+
+.nav-links li {
+    margin-top: 15px;
+    padding-right: 30px;
+}
+
+.nav-links li > a:hover {
+    opacity: .7;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle > a {
+    overflow: visible;
+    position: relative;
+}
+
+.dropdown-toggle > a:before {
+    content: '';
+    width: 12px;
+    height: 10px;
+    display: inherit;
+    position: absolute;
+    right: -25px;
+    top: 7px;
+    background-image: url("images/icon-arrow-light.svg");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    transition: transform .3s;
+}
+
+.dropdown-menu {
+    color: #333;
+    width: 125%;
+    height: 0;
+    position: absolute;
+    top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: height .3s ease-in;
+    overflow: hidden;
+}
+
+.dropdown-menu li {
+    display: none;
+    margin-left: 15px;
+}
+
+.dropdown-toggle:hover .dropdown-menu{
+   height: 450%;
+}
+
+
+.dropdown-toggle:hover .dropdown-menu li {
+    display: block;
+}
+
+.dropdown-toggle:hover > a::before {
+    transform: rotate(-180deg);
+}
+
+.dropdown-menu li:hover {
+    color: #000;
+    font-weight: bolder;
+}
+
+.get-in {
+    flex-grow: 1;
+    text-align: right;
+    margin-top: 15px;
+}
+
+.get-in a {
+    margin-left: 35px;
+}
+
+.get-in a:first-child:hover {
+    border-bottom: 2px solid #fff;
+}
+
+nav input {
+    display: none;
+}
+
+
+/* ---------- Showcase ---------- */
+.showcase {
+    margin: auto;
+
+}
+
+.showcase h1, .showcase p, .showcase-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.showcase-links {
+    margin-top: 50px;
+}
+
+.showcase-links a:first-child {
+    margin-right: 13px;
+}
+
+.showcase-links a:last-child {
+    color: white;
+    background: transparent;
+    border: 1px solid #fff;
+    margin-left: 13px;
+}
+
+.showcase-links a:last-child:hover {
+    color: hsl(356, 100%, 66%);
+    background-color: #fff;
+}
+
+
+/* ---------- First Section ---------- */
+.first-section, .third-section {
+    padding-bottom: 120px;
+}
+
+.first-section .container {
+    width: 90%;
+    margin: 0 0 0 auto;
+}
+
+.first-section  h2 {
+    text-align: center;
+}
+
+.first-section .col, .third-section .col {
+    padding: 120px 0 0;
+}
+
+
+.background-image {
+    width: 100%;
+    background: url("images/illustration-editor-desktop.svg");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    right: -10%;
+    flex-grow: 1;
+}
+
+.editor-context, .editor-context-2 {
+    margin-bottom: 50px;
+}
+
+section h3 {
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Second Section ---------- */
+.second-section {
+    background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    padding: 0;
+    border-top-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+}
+
+.layer {
+    background-image: url('images/bg-pattern-circles.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: -100% 75%;
+    position: relative;
+}
+
+.second-section .row {
+    justify-content: right;
+}
+
+.second-section .col {
+    flex-basis: 45%;
+    height: fit-content;
+}
+
+.second-section .background-image {
+    height: 500px;
+    background: url('images/illustration-phones.svg') 0% / 450px no-repeat ;
+    transform: translate(-60px, -60px);
+    position: absolute;
+}
+
+.second-section .editor-context {
+    padding: 80px 50px;
+    margin-bottom: 0;
+}
+
+.second-section h3, .second-section p {
+    color: #fff;
+}
+
+/* ---------- third Section ---------- */
+
+.third-section .container {
+    width: 95%;
+    margin: 0 auto 0 0;
+}
+
+
+.third-section .background-image {
+    background: url('images/illustration-laptop-desktop.svg');
+    left: -10%;
+    width: 100%;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    flex-grow: 1;
+}
+
+
+/* ---------- Footer ---------- */
+footer {
+    max-width: 1440px;
+    margin: 0 auto;
+    color: hsl(240, 2%, 79%);
+    background:  hsl(240, 10%, 16%);
+    padding: 50px 0;
+    border-top-right-radius: 90px;
+}
+
+footer .col {
+    flex-basis: 23%;
+}
+
+footer h4 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    padding-top: 12px;
+}
+
+footer li {
+    font-size: .9em;
+    margin-bottom: 8px;
+}
+
+footer li a:hover {
+    border-bottom: 2px solid hsl(240, 2%, 79%);
+}
+
+
+/* ---------- Utilites ---------- */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+   flex-basis: 48%;  
+}
+
+.col-1 {
+    flex-basis: 40%;
+}
+
+.hero-btn {
+    color: hsl(356, 100%, 66%);
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    color: #fff;
+    background-color: hsl(355, 100%, 74%);
+}
+
+.paragraph {
+    font-size: .8em;
+    color: hsl(207, 13%, 34%);
+    line-height: 1.6;
+    max-width: 415px;
+}
+
+
+/* ---------- Media Query 768px ---------- */
+@media (max-width:768px) {
+    .showcase {
+        font-size: 70%;
+    }
+
+    .paragraph {
+        margin-right: auto; 
+        margin-left: auto;
+    }
+
+    /* ----------- Humber Menu ---------- */
+    nav {
+        justify-content: space-between;
+    }
+
+    .links {    
+        font-size: 1.3em;
+        color: #000;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 5);
+        text-align: center;
+        margin: 0 auto;
+        overflow: hidden;
+        transition: all .5s;
+    }
+
+    .nav-links {
+        width: 90%;
+        height: 30vh;
+        margin: 0 auto auto;
+        padding: 30px 0 10px;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(187, 187, 187);
+        flex-grow: 1;
+        transition: none;
+    }
+
+    .nav-links li {
+        margin: 15px auto;
+        padding: 0;
+    }
+
+    .get-in {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+    }
+
+    .get-in a{
+        text-align: center;
+        margin: 0 auto 10px;
+        width: fit-content;
+
+    }
+
+    .get-in .hero-btn {
+        color: #fff;
+        background-image: linear-gradient(to left, hsl(353, 100%, 62%) 50%, hsl(13, 100%, 72%) 100%)
+    }
+
+    .humber-menu {
+        margin-top: 17px;
+    }
+
+    .humber-icon, .humber-icon::before, .humber-icon::after {
+        content: '';
+        width: 27px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+        display: block;
+    }
+
+    .humber-icon::before, .humber-icon::after {
+        position: absolute;
+        top: -7px;
+        transition:  .3s;
+    }
+
+    .humber-icon::after {
+        top: 7px;
+    }
+
+    nav input:checked + .links {
+        height: 60vh;
+    }
+
+    nav input:checked ~ .humber-menu .humber-icon {
+        background-color: transparent;
+    }
+
+    nav input:checked ~ .humber-menu .humber-icon::before, nav input:checked ~ .humber-menu .humber-icon::after {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    nav input:checked ~ .humber-menu .humber-icon::after {
+        transform: rotate(-45deg);
+    }
+
+    /* ----------- dropdown menu ---------- */
+    
+
+    /* ----------- first Section ---------- */
+    .col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .first-section .col:nth-of-type(1) {
+        padding-top: 0;
+    }
+
+    .first-section .container, .third-section .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .first-section .background-image, .third-section .background-image {
+        right: 0;
+        padding-top: 300px;
+        background: url('images/illustration-editor-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        order: -1;
+    }
+
+    .first-section h2 {
+        font-size: 1.9em;
+        margin-bottom: 30px;
+    }
+
+
+    /* ----------- Second Section ---------- */   
+    .second-section .row {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .second-section .layer {
+        background-position: top;
+    }
+
+
+    .second-section .background-image {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        right: 0;
+        transform: translateY(-200px);
+        background-size: 350px;
+    }
+
+    .second-section .col-1 {
+        padding: 120px 0 0;
+    }
+
+    .second-section .editor-context {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* ----------- Third Section ---------- */
+    .third-section {
+        padding-top: 0;
+    }
+
+    .third-section .background-image {
+        background: url('images/illustration-laptop-mobile.svg');
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-bottom: 450px;
+    }
+
+    .third-section .col {
+        padding-top: 0;
+    }
+
+    /* ----------- footer Section ---------- */
+    footer {
+        padding-bottom: 20px;
+    }
+
+    footer .col {
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+
+    footer h4 {
+        margin-bottom: 15px;
+    }
+
+}
